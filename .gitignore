@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-node_modules
-=======
 # Logs
 logs
-*.log
-npm-debug.log*
+.log
+npm-debug.log
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
@@ -13,18 +10,17 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-*.local
+.local
 
-# Editor directories and files
-.vscode/*
+Editor directories and files
+.vscode/
 !.vscode/extensions.json
 .idea
 .DS_Store
 *.suo
-*.ntvs*
+.ntvs
 *.njsproj
 *.sln
 *.sw?
 .env
->>>>>>> 560302af269327c2dd27923f68bce1feabec0ff0
 package-lock.json
