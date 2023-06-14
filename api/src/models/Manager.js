@@ -1,10 +1,11 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  sequelize.model("Manager", {
+  sequelize.define('Manager', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
+      primaryKey:true,
       unique: true,
       allowNull: false,
     },
