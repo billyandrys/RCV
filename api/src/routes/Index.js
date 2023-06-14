@@ -18,7 +18,7 @@ router.use(morgan('dev'))
 router.use('/baby', babyRouter);
 /* router.use('/eps', epsRouter); */
 /* router.use('/ips', ipsRouter); */
-/* router.use('/padres', responsableRouter); */
-/* router.use('/vacunacion', vacunacionRouter); */
-/* router.use('/usuarios', usuariosRouter) */
+/* router.use('/manager', managerRouter); */
+/* router.use('/vaccination', vaccinationRouter); */
+/* router.use('/users', userssRouter) */
 module.exports = router;
