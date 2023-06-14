@@ -7,6 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
+<<<<<<< HEAD
     <>
       <div>
         <a href="https://vitejs.dev" target="_blank">
@@ -29,6 +30,11 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
+=======
+    <div>
+      hola mundo
+   </div>
+>>>>>>> 560302af269327c2dd27923f68bce1feabec0ff0
   )
 }
 
