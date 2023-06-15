@@ -92,7 +92,7 @@ const handlerUpdateBaby = async (req, res) => {
     note,
   } = req.body;
   try {
-    const oneManager = await Baby.update(
+    const oneBaby = await Baby.update(
       {
         name: name,
         lastname: lastname,
