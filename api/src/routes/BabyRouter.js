@@ -1,13 +1,10 @@
 const { Router } = require('express');
 const BabyRouter = Router();
-//const { handleDogsAll, handleDogById, handleDogCreate } = require('../handlers/dogHandler')
+const { handlerAllBaby, handlerBabyCreate, handlerUpdateBaby } = require('../handler/babyHandler')
 
-function rutasBaby() {
-    return 'pepe'
-}
 
-BabyRouter.get('/',rutasBaby)
-/* BebesRouter.get('/:idRaza', handleDogById) */
-/* BebesRouter.post('/', handleDogCreate) */
+BabyRouter.get('/',handlerAllBaby)
+BabyRouter.post('/', handlerBabyCreate)
+BabyRouter.put('/',handlerUpdateBaby)
  
 module.exports = BabyRouter
