@@ -2,9 +2,15 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
+
 const babyModel = require('./models/Baby')
 const managerModel = require('./models/Manager')
 const vaccinationModel = require('./models/Vaccination')
+const user = require('./models/User')
+const eps = require('./models/Eps')
+const ips = require('./models/Ips')
+
+
 const {
   DB_USER, DB_PASSWORD, DB_HOST, DB_NAME,
 } = process.env;
@@ -16,9 +22,14 @@ const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}
 babyModel(sequelize)
 managerModel(sequelize)
 vaccinationModel(sequelize)
+user(sequelize)
+eps(sequelize)
+ips(sequelize)
+
 // En sequelize.models están todos los modelos importados como propiedades
 // Para relacionarlos hacemos un destructuring
-const { Baby, Manager, Vaccination } = sequelize.models;
+const { Baby, Manager, Vaccination, User, Eps, Ips } = sequelize.models;
+
 
 // Aca vendrian las relaciones
 // Product.hasMany(Reviews);
