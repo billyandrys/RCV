@@ -1,9 +1,9 @@
-const { Sequelize,  DataType } = requiere('sequelize')
+const {  DataTypes } = require('sequelize')
 
 module.exports = (sequelize)=>{
  sequelize.define('ips', {
     id:{
-        type: DataType.INTEGER,
+        type: DataTypes.INTEGER,
         autoIncrement:true,
         allowNull: false,
         primaryKey: true,
