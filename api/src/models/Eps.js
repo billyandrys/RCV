@@ -2,7 +2,7 @@ const { DataTypes } = require('sequelize')
 
 module.exports = (sequelize)=>{
 
-    sequelize.define('eps', {
+    sequelize.define('Eps', {
         id:{
             type : DataTypes.INTEGER,
             autoIncrements: true,
