@@ -9,10 +9,6 @@ module.exports = (sequelize) => {
       unique: true,
       allowNull: false,
     },
-    id_baby: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -67,11 +63,7 @@ module.exports = (sequelize) => {
     whatsapp: {
       type: DataTypes.STRING,
       allowNull: false,
-    },
-    id_eps: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-    }
+    } 
   },{
     timestamps: false,
   });

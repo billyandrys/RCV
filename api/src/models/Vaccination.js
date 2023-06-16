@@ -9,10 +9,6 @@ module.exports = (sequelize) => {
       primaryKey:true,
       autoIncrement:true
     },
-    id_baby: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-    },
     protectMeFrom: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -30,10 +26,6 @@ module.exports = (sequelize) => {
       allowNull:false
     },
     nro_lote: {
-      type: DataTypes.INTEGER,
-      allowNull:false
-    },
-    id_ips_vacunadora: {
       type: DataTypes.INTEGER,
       allowNull:false
     },

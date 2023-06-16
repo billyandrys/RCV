@@ -24,7 +24,7 @@ module.exports = (sequelize)=>{
             allowNull: false,
 
         },
-        eamil: {
+        email: {
             type: DataTypes.STRING,
             allowNull: true,
             unique: true
