@@ -39,6 +39,7 @@ Eps.belongsToMany(Ips, { through: 'IPS_EPS' })
 Baby.hasMany(Vaccination)
 Ips.hasMany(Vaccination)
 Roles.hasMany(User)
+Eps.hasMany(Manager)
 
 module.exports = {
   ...sequelize.models, 
