@@ -52,14 +52,6 @@ module.exports = (sequelize) => {
         type: DataTypes.DATEONLY,
         allowNull: false,
       },
-      id_father: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
-      id_mother: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-      },
       weight: {
         type: DataTypes.DECIMAL(5, 2),
         allowNull: false,
