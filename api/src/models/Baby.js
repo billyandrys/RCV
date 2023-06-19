@@ -29,7 +29,7 @@ module.exports = (sequelize) => {
       lastname: {
         type: DataTypes.STRING,
         allowNull: false,
-        set(value) {
+        /* set(value) {
           this.setDataValue("lastname", value.toLowerCase());
         },
         get() {
@@ -37,7 +37,7 @@ module.exports = (sequelize) => {
             this.getDataValue("lastname").slice(0, 1).toUpperCase() +
             this.getDataValue("lastname").slice(1).toLowerCase();
           return value;
-        },
+        }, */
       },
       nro_cedula: {
         type: DataTypes.INTEGER,

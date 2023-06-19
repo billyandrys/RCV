@@ -12,12 +12,16 @@ module.exports = (sequelize)=>{
         name: {
             type: DataTypes.STRING,
             allowNull:false,
-            set(value){
-                this.setDataValue('name', value.toUppercase())
-            },
-            get(value){
-                this.getDataValue('name', value.slice(0,1).toUpperCase() + value.slice(1).toLowerCase())
-            }
+            set(value) {
+                this.setDataValue("name", value.toLowerCase());
+              },
+              get() {
+                const value =
+                  this.getDataValue("name").slice(0, 1).toUpperCase() +
+                  this.getDataValue("name").slice(1).toLowerCase();
+      
+                return value;
+              },
         }
     })
 

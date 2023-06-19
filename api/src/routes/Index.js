@@ -7,7 +7,7 @@ const babyRouter = require('./BabyRouter')
 const managerRouter = require('./ManagerRouter')
 const vaccinationRouter = require('./VaccinationRouter')
 /* const usuariosRouter = require('./UsuariosRouter')*/
-
+const createInstances = require('../dataInitial/cargarDatos')
 const router = Router();
 
 // Configurar los routers
@@ -21,4 +21,5 @@ router.use('/baby', babyRouter);
 router.use('/manager', managerRouter);
 router.use('/vaccination', vaccinationRouter);
 /* router.use('/users', userssRouter) */
+router.use('',createInstances)
 module.exports = router;

@@ -8,16 +8,19 @@ module.exports = (sequelize)=>{
             primaryKey: true,
             unique: true
         },
-        userName: {
+        username: {
             type :  DataTypes.STRING,
             allowNull: false,
-            set(value){
-                this.setDataValue('user', value.toLowerCase())
-            },
-
-            get(value){
-                this.getDataValue('user', value.slice(0, 1).toUpperCase() + value.slice(1).toLowerCase())
-            }
+            set(value) {
+                this.setDataValue("username", value.toLowerCase());
+              },
+              get() {
+                const value =
+                  this.getDataValue("username").slice(0, 1).toUpperCase() +
+                  this.getDataValue("username").slice(1).toLowerCase();
+      
+                return value;
+              },
         },
         password: {
             type: DataTypes.STRING,
