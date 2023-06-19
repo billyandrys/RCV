@@ -1,0 +1,102 @@
+[
+  {
+    "id_baby": 1,
+    "protectMeFrom": "Difteria, tétanos y tos ferina",
+    "dose": 1,
+    "applicationDate": "2022-04-01",
+    "laboratory": "Laboratorio A",
+    "nro_lote": 123,
+    "id_ips_vacunadora": 1,
+    "nurse": "Ana López"
+  },
+  {
+    "id_baby": 2,
+    "protectMeFrom": "Polio",
+    "dose": 2,
+    "applicationDate": "2022-03-15",
+    "laboratory": "Laboratorio B",
+    "nro_lote": 456,
+    "id_ips_vacunadora": 2,
+    "nurse": "Pedro Gómez"
+  },
+  {
+    "id_baby": 3,
+    "protectMeFrom": "Hepatitis B",
+    "dose": 1,
+    "applicationDate": "2022-02-20",
+    "laboratory": "Laboratorio C",
+    "nro_lote": 789,
+    "id_ips_vacunadora": 3,
+    "nurse": "María Rodríguez"
+  },
+  {
+    "id_baby": 4,
+    "protectMeFrom": "Haemophilus influenzae tipo b",
+    "dose": 2,
+    "applicationDate": "2022-06-10",
+    "laboratory": "Laboratorio D",
+    "nro_lote": 123,
+    "id_ips_vacunadora": 4,
+    "nurse": "Juan Hernández"
+  },
+  {
+    "id_baby": 5,
+    "protectMeFrom": "Rotavirus",
+    "dose": 1,
+    "applicationDate": "2022-05-05",
+    "laboratory": "Laboratorio E",
+    "nro_lote": 456,
+    "id_ips_vacunadora": 5,
+    "nurse": "Carolina Vargas"
+  },
+  {
+    "id_baby": 6,
+    "protectMeFrom": "Neumococo",
+    "dose": 2,
+    "applicationDate": "2022-07-20",
+    "laboratory": "Laboratorio F",
+    "nro_lote": 789,
+    "id_ips_vacunadora": 6,
+    "nurse": "Andrés Fernández"
+  },
+  {
+    "id_baby": 7,
+    "protectMeFrom": "Influenza",
+    "dose": 1,
+    "applicationDate": "2022-09-01",
+    "laboratory": "Laboratorio G",
+    "nro_lote": 12,
+    "id_ips_vacunadora": 7,
+    "nurse": "Laura Moreno"
+  },
+  {
+    "id_baby": 8,
+    "protectMeFrom": "Sarampión, rubéola y paperas",
+    "dose": 2,
+    "applicationDate": "2022-08-15",
+    "laboratory": "Laboratorio H",
+    "nro_lote": 345,
+    "id_ips_vacunadora": 8,
+    "nurse": "Daniel Lara"
+  },
+  {
+    "id_baby": 9,
+    "protectMeFrom": "Varicela",
+    "dose": 1,
+    "applicationDate": "2022-12-01",
+    "laboratory": "Laboratorio I",
+    "nro_lote": 678,
+    "id_ips_vacunadora": 9,
+    "nurse": "Mariana Pérez"
+  },
+  {
+    "id_baby": 10,
+    "protectMeFrom": "Hepatitis A",
+    "dose": 2,
+    "applicationDate": "2022-11-15",
+    "laboratory": "Laboratorio J",
+    "nro_lote": 901,
+    "id_ips_vacunadora": 10,
+    "nurse": "Roberto González"
+  }
+]
