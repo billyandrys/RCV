@@ -1,36 +1,37 @@
-const { DataTypes } = require('sequelize')
+const { DataTypes } = require("sequelize");
 
-module.exports = (sequelize)=>{
-    sequelize.define('User', {
-        id:{
-            type: DataTypes.INTEGER,
-            autoIncrement: true,
-            primaryKey: true,
-            unique: true
-        },
-        userName: {
-            type :  DataTypes.STRING,
-            allowNull: false,
-            set(value){
-                this.setDataValue('user', value.toLowerCase())
-            },
+module.exports = (sequelize) => {
+  sequelize.define("User", {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+      unique: true,
+    },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      set(value) {
+        this.setDataValue("username", value.toLowerCase());
+      },
+      get() {
+        const value =
+          this.getDataValue("username").slice(0, 1).toUpperCase() +
+          this.getDataValue("username").slice(1).toLowerCase();
 
-            get(value){
-                this.getDataValue('user', value.slice(0, 1).toUpperCase() + value.slice(1).toLowerCase())
-            }
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: true,
-            unique: true
-        }
-
-
-
-    })
-}
+        return value;
+      },
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: true,
+      unique: true,
+    },
+  },{
+    tableName: 'User' // Nombre de tabla personalizado
+  });
+};

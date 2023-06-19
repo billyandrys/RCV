@@ -15,5 +15,7 @@ module.exports = (sequelize) => {
     }
   }, {
     timestamps: false
+  },{
+    tableName: 'Roles' // aqui pongo el mismo valor que define asi sequelize no lo cambie
   });
 };
