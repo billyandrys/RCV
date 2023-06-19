@@ -44,7 +44,7 @@ module.exports = (sequelize) => {
       allowNull: false,
     },
     nro_cedula: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       unique: true,
     },
@@ -66,7 +66,5 @@ module.exports = (sequelize) => {
     } 
   },{
     timestamps: false,
-  },{
-    tableName: 'Manager' // Nombre de tabla personalizado
   });
 };

@@ -1,4 +1,4 @@
-const { Baby, Manager } = require("../db");
+const { Baby } = require("../db");
 
 const handlerAllBaby = async (req, res) => {
   const { idBaby } = req.query;
@@ -9,7 +9,7 @@ const handlerAllBaby = async (req, res) => {
         return res.status(200).json({ msg: `id: ${idBaby} Not Found!` });
       res.status(200).json(oneBaby);
     } else {
-      const allBaby = await Baby.findAll({include: Manager});
+      const allBaby = await Baby.findAll();
       console.log("handlerAllBaby");
       res.status(200).json(allBaby);
     }
@@ -25,8 +25,6 @@ const handlerBabyCreate = async (req, res) => {
     nro_cedula,
     codigo_eps,
     dateOfBirth,
-    id_father,
-    id_mother,
     weight,
     height,
     gender,
@@ -42,8 +40,6 @@ const handlerBabyCreate = async (req, res) => {
       !dateOfBirth ||
       !weight ||
       !height ||
-      !id_father ||
-      !id_mother ||
       !gender ||
       !bloodType
     ) {
@@ -64,7 +60,6 @@ const handlerBabyCreate = async (req, res) => {
         },
       });
       if (created) {
-        newBaby.addManagers([id_father,id_mother])
         res.status(201).json({ msg: "the baby has been successfully created" });
       } else {
         res.status(200).json({ msg: "the baby already exists" });

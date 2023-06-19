@@ -35,7 +35,5 @@ module.exports = (sequelize) => {
     }
   }, {
     timestamps: false,
-  },{
-    tableName: 'Vaccination' // Nombre de tabla personalizado
   });
 };

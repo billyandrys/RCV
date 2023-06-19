@@ -1,36 +1,29 @@
-const { DataTypes } = require("sequelize");
+const {  DataTypes } = require('sequelize')
 
-module.exports = (sequelize) => {
-  sequelize.define(
-    "Ips",
-    {
-      id: {
+module.exports = (sequelize)=>{
+ sequelize.define('Ips', {
+    id:{
         type: DataTypes.INTEGER,
-        autoIncrement: true,
+        autoIncrement:true,
         allowNull: false,
         primaryKey: true,
-        unique: true,
-      },
-      name: {
+        unique:true
+    },
+    name: {
         type: DataTypes.STRING,
-        allowNull: false,
-        set(value) {
-          this.setDataValue("name", value.toLowerCase());
+        allowNull:false,
+        set(value){
+            this.setDataValue('name', value.toLowerCase())
         },
-        get() {
-          const value =
-            this.getDataValue("name").slice(0, 1).toUpperCase() +
-            this.getDataValue("name").slice(1).toLowerCase();
-
-          return value;
+        get(value){
+            this.getDataValue('name', value.slice(0,1).toUppercase() + value.slice(1).toLowerCase())
         },
         validate: {
-          notEmpty: true,
-        },
-      },
-    },
-    {
-      tableName: "Ips", // Nombre de tabla personalizado
+            notEmpty: true
+        }
+
+
     }
-  );
-};
+ })
+
+}
