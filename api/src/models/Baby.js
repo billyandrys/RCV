@@ -53,7 +53,7 @@ module.exports = (sequelize) => {
         allowNull: false,
       },
       weight: {
-        type: DataTypes.DECIMAL(5, 2),
+        type: DataTypes.DECIMAL(5, 3),
         allowNull: false,
         get(value) {
           this.getDataValue("peso", value + "Kg");
@@ -72,11 +72,11 @@ module.exports = (sequelize) => {
           "A+",
           "A-",
           "B+",
-          "B - ",
-          "AB + ",
-          "AB - ",
-          "O + ",
-          "O - ",
+          "B-",
+          "AB+",
+          "AB-",
+          "O+",
+          "O-",
         ]),
         allowNull: false,
       },
@@ -84,9 +84,12 @@ module.exports = (sequelize) => {
         type: DataTypes.TEXT,
         allowNull: true,
       },
+    },{
+      tableName: 'Baby' // Nombre de tabla personalizado
     },
     {
       timestamps: false,
     }
   );
 };
+
