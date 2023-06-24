@@ -1,4 +1,4 @@
-const { Baby } = require("../db");
+const { Baby, Manager } = require("../db");
 
 const handlerAllBaby = async (req, res) => {
   const { idBaby } = req.query;
@@ -9,8 +9,7 @@ const handlerAllBaby = async (req, res) => {
         return res.status(200).json({ msg: `id: ${idBaby} Not Found!` });
       res.status(200).json(oneBaby);
     } else {
-      const allBaby = await Baby.findAll();
-      console.log("handlerAllBaby");
+      const allBaby = await Baby.findAll({include:Manager});
       res.status(200).json(allBaby);
     }
   } catch (error) {
@@ -25,8 +24,6 @@ const handlerBabyCreate = async (req, res) => {
     nro_cedula,
     codigo_eps,
     dateOfBirth,
-    id_father,
-    id_mother,
     weight,
     height,
     gender,
@@ -40,8 +37,6 @@ const handlerBabyCreate = async (req, res) => {
       !nro_cedula ||
       !codigo_eps ||
       !dateOfBirth ||
-      !id_father ||
-      !id_mother ||
       !weight ||
       !height ||
       !gender ||
@@ -56,8 +51,6 @@ const handlerBabyCreate = async (req, res) => {
           lastname: lastname,
           codigo_eps: codigo_eps,
           dateOfBirth: dateOfBirth,
-          id_father: id_father,
-          id_mother: id_mother,
           weight: weight,
           height: height,
           gender: gender,
@@ -83,8 +76,6 @@ const handlerUpdateBaby = async (req, res) => {
     lastname,
     codigo_eps,
     dateOfBirth,
-    id_father,
-    id_mother,
     weight,
     height,
     gender,
@@ -98,8 +89,6 @@ const handlerUpdateBaby = async (req, res) => {
         lastname: lastname,
         codigo_eps: codigo_eps,
         dateOfBirth: dateOfBirth,
-        id_father: id_father,
-        id_mother: id_mother,
         weight: weight,
         height: height,
         gender: gender,
