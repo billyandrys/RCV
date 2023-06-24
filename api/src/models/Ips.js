@@ -12,18 +12,26 @@ module.exports = (sequelize)=>{
     name: {
         type: DataTypes.STRING,
         allowNull:false,
-        set(value){
-            this.setDataValue('name', value.toLowerCase())
         },
-        get(value){
-            this.getDataValue('name', value.slice(0,1).toUppercase() + value.slice(1).toLowerCase())
-        },
-        validate: {
-            notEmpty: true
-        }
 
+    address: {
+        type: DataTypes.STRING,
+        allowNull:true
+    },
+    phone: {
+        type: DataTypes.STRING,
+        allowNull:true
+    },
+    email: {
+        type: DataTypes.STRING,
+        allowNull: true
 
+    },
+    status: {
+        type: DataTypes.BOOLEAN,
+        alloNull: true
     }
+
  })
 
 }

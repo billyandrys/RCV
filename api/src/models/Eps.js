@@ -5,20 +5,34 @@ module.exports = (sequelize)=>{
     sequelize.define('eps', {
         id:{
             type : DataTypes.INTEGER,
-            autoIncrements: true,
+            autoIncrement: true,
             primaryKey: true,
             unique:true
         },
         name: {
             type: DataTypes.STRING,
             allowNull:false,
-            set(value){
-                this.setDataValue('name', value.toUppercase())
-            },
-            get(value){
-                this.getDataValue('name', value.slice(0,1).toUpperCase() + value.slice(1).toLowerCase())
-            }
+            
+        },
+        address:{
+            type: DataTypes.STRING,
+            allowNull:true,
+
+        },
+        phone: {
+            type:DataTypes.STRING,
+            allowNull:false
+        },
+        email: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
+        status:{
+            type: DataTypes.BOOLEAN,
+            allowNull: true
         }
+
+
     })
 
 }

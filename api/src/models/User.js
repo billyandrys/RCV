@@ -8,26 +8,24 @@ module.exports = (sequelize)=>{
             primaryKey: true,
             unique: true
         },
-        userName: {
+        username: {
             type :  DataTypes.STRING,
             allowNull: false,
-            set(value){
-                this.setDataValue('user', value.toLowerCase())
-            },
-
-            get(value){
-                this.getDataValue('user', value.slice(0, 1).toUpperCase() + value.slice(1).toLowerCase())
-            }
+            
         },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
 
         },
-        eamil: {
+        email: {
             type: DataTypes.STRING,
             allowNull: true,
             unique: true
+        }, 
+        status: {
+            type: DataTypes.BOOLEAN,
+            allowNull: true
         }
 
 
