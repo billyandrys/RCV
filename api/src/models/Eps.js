@@ -12,26 +12,6 @@ module.exports = (sequelize)=>{
         name: {
             type: DataTypes.STRING,
             allowNull:false,
-<<<<<<< HEAD
-            
-        },
-        address:{
-            type: DataTypes.STRING,
-            allowNull:true,
-
-        },
-        phone: {
-            type:DataTypes.STRING,
-            allowNull:false
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        status:{
-            type: DataTypes.BOOLEAN,
-            allowNull: true
-=======
             set(value) {
                 this.setDataValue("name", value.toLowerCase());
               },
@@ -42,7 +22,6 @@ module.exports = (sequelize)=>{
       
                 return value;
               },
->>>>>>> c39d0aea37ed12351130aaeaeb2024366bb47411
         }
 
 

@@ -11,9 +11,6 @@ module.exports = (sequelize)=>{
         username: {
             type :  DataTypes.STRING,
             allowNull: false,
-<<<<<<< HEAD
-            
-=======
             set(value) {
                 this.setDataValue("username", value.toLowerCase());
               },
@@ -24,7 +21,6 @@ module.exports = (sequelize)=>{
       
                 return value;
               },
->>>>>>> c39d0aea37ed12351130aaeaeb2024366bb47411
         },
         password: {
             type: DataTypes.STRING,
